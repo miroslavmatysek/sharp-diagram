@@ -1,4 +1,4 @@
-﻿namespace SharpDiagram.Editor.ViewModels;
+﻿namespace SharpDiagram.Editor.ViewModel;
 
 public class MainWindowViewModel : ViewModelBase
 {

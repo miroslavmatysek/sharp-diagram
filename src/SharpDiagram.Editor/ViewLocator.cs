@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using SharpDiagram.Editor.ViewModels;
+using SharpDiagram.Editor.ViewModel;
 
 namespace SharpDiagram.Editor;
 

@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace SharpDiagram.Editor.ViewModels;
+namespace SharpDiagram.Editor.ViewModel;
 
 public abstract class ViewModelBase : ReactiveObject
 {

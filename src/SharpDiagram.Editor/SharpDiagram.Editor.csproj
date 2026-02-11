@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Models\"/>
         <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
@@ -26,5 +25,11 @@
         <PackageReference Include="NLog.Extensions.Hosting" Version="6.1.1" />
         <PackageReference Include="ReactiveUI.Avalonia" Version="11.3.8"/>
         <PackageReference Include="Splat.Microsoft.Extensions.DependencyInjection" Version="17.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SharpDiagram.Common\SharpDiagram.Common.csproj" />
+      <ProjectReference Include="..\SharpDiagram.Editor.ViewModel\SharpDiagram.Editor.ViewModel.csproj" />
+      <ProjectReference Include="..\SharpDiagram.Editor.View\SharpDiagram.Editor.View.csproj" />
     </ItemGroup>
 </Project>

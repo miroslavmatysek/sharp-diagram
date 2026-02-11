@@ -7,8 +7,8 @@ using Microsoft.Extensions.Logging;
 using NLog.Extensions.Hosting;
 using ReactiveUI;
 using ReactiveUI.Avalonia;
-using SharpDiagram.Editor.ViewModels;
-using SharpDiagram.Editor.Views;
+using SharpDiagram.Editor.View;
+using SharpDiagram.Editor.ViewModel;
 using Splat;
 using Splat.Microsoft.Extensions.DependencyInjection;
 
