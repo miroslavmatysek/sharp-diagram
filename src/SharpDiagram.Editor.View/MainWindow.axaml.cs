@@ -1,10 +1,9 @@
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+using ReactiveUI.Avalonia;
+using SharpDiagram.Editor.ViewModel;
 
 namespace SharpDiagram.Editor.View;
 
-public partial class MainWindow : Window
+public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
 {
     public MainWindow()
     {

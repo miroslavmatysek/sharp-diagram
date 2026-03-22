@@ -22,4 +22,8 @@
       <AvaloniaResource Include="Assets\avalonia-logo.ico" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Locator\" />
+    </ItemGroup>
+
 </Project>

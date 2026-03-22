@@ -1,1 +1,1 @@
-# sharp-diagram
+# Sharp Diagram

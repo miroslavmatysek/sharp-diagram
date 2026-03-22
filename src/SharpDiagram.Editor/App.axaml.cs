@@ -1,4 +1,5 @@
 using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,10 +25,7 @@ public partial class App : Application
     public override void OnFrameworkInitializationCompleted()
     {
         var hostBuilder = new HostBuilder()
-            .ConfigureLogging(builder =>
-            {
-                builder.ClearProviders();
-            })
+            .ConfigureLogging(builder => { builder.ClearProviders(); })
             .UseNLog()
             .ConfigureServices((context, services) =>
             {
@@ -39,6 +37,7 @@ public partial class App : Application
                     typeof(IActivationForViewFetcher));
                 Locator.CurrentMutable.RegisterConstant(new AutoDataTemplateBindingHook(),
                     typeof(IPropertyBindingHook));
+                
                 RxApp.MainThreadScheduler = AvaloniaScheduler.Instance;
                 services.Compose();
             });
@@ -48,11 +47,10 @@ public partial class App : Application
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            var window = host.Services.GetRequiredService<MainWindow>();
-            var vm = host.Services.GetRequiredService<MainWindowViewModel>();
-            window.DataContext = vm;
+            var window = Locator.Current.GetService<IViewFor<MainWindowViewModel>>();
 
-            desktop.MainWindow = window;
+
+            desktop.MainWindow = (Window)window;
             desktop.MainWindow.Show();
 
             desktop.Exit += async (_, _) =>
